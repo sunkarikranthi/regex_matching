@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Matching</title>
+
+    <style>
+        .true-color {
+            color: green;
+        }
+        .false-color {
+            color: red;
+        }
+    </style>
+
+</head>
+<body style="font-family: cursive;">
+    <div style="margin: 2%;">
+    <h1 style="color: blueviolet;">Regex Matching Web App</h1>
+    <form action="/results", method="post">
+    <b style="color: #205f0b;">Regular Expression :</b> <input name="regex" type="text" placeholder="insert your regular expression here" style="width: 25%; margin-bottom: 10px;" required> <br />
+    <b style="color: #205f0b;">Text String :</b> <input name="test_string" type="text" placeholder="insert your test string " style="width: 25%; margin-bottom: 10px;" required> 
+    <label for="func">Choose a function :</label>
+    <select name="func">
+        <option value="findall">findall</option>
+        <option value="search">search</option>
+        <option value="split">split</option>
+        <!--<option value="sub">sub</option>-->
+    </select>
+    <br />
+    <input type="submit" value="Submit" style="background-color:#399039; color: white; border-radius: 5px; margin-left: 15%;">
+</form>
+    </div>
+    <Section style="margin: 2%;">
+        <b style="color: brown;">findall</b> ---	Returns a list containing all matches <br/>
+        <b style="color: brown;">search</b> --- Returns a Match object if there is a match anywhere in the string <br/>
+        <b style="color: brown;">split</b> --- Returns a list where the string has been split at each match <br/>
+        <!-- <b style="color: brown;">sub</b> --- Replaces one or many matches with a string <br/> -->
+    </Section>
+    <br/>
+    <Section style="margin: 2%;">
+        <form action="/validate_email", method="post">
+        <h2 style="color: blueviolet;">check here to validate email address</h2>
+        <b>Email : </b> <input type="text" placeholder="eg: kranthi.sunkari@live.com" name="email" style="width: 15%;" required>
+        <button type="submit" style="background-color:#399039; color: white; border-radius: 5px;">Validate</button>
+    </form>
+
+    <h4 class="{% if condition %}true-color{% else %}false-color{% endif %}">{{email}} 
+         {{email_address}}</h4>
+    </Section>
+</body>
+</html>
